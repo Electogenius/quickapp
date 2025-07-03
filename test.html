@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <script src="./src/index.js"></script>
+</head>
+
+<body>
+    <script>
+        Q();
+        $$horizontal()
+            $$vertical()
+                $h1("addition")
+                let a = $input('', 'value=0')
+                $span('+')
+                let b = $input('', 'value=0')
+                let output = $span()
+            end
+            $$vertical()
+                $h1("subtraction")
+                let c = $input('', 'value=0')
+                $span('-')
+                let d = $input('', 'value=0')
+                let outputs = $span()
+            end
+        end
+        $EveryFrame(() => {
+            output.innerText = '= ' + ((+a.value) + (+b.value))
+            outputs.innerText = '= ' + ((+c.value) - (+d.value))
+        })
+    </script>
+</body>
+
+</html>
