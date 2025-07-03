@@ -8,7 +8,7 @@ Q();                            //initialize library
 $h1("This creates a heading");
 $$p();                          // $$elementname creates the element and goes inside it
     $span("This is some")
-    $b("strong green", "color=green")
+    $b("strong green", "style=color:green")
     $span("text.")
 end                             // exits paragraph
 ```
